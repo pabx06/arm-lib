@@ -19,5 +19,7 @@ before_script:
   - cd ..
   - cd builds
   - ../scripts/extract.sh
+  - cd ..
+  - pwd
 script:
-  -echo "done"
+  - echo "done"
