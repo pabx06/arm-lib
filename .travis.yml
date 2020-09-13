@@ -25,14 +25,14 @@ script:
 before_deploy:
 - git config --local user.name "travis-ci"
 - git config --local user.email "travis-ci"
-- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-- git tag $TRAVIS_TAG
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(git tag|tail -n1 )}
+
 deploy:
-  draft: true
   provider: releases
   api_key:
     secure: XGGtoYrwGHSZ8YWw3bsdN+n7xeg2AC/1EhjplYKLyZZs2xHpzShacW3ORs6FdllvvTGG/0tJ3EW5by7NjfKtJ9QuR6CrQgBBm86aqsiTnkIcu7EMBf8q6v7DK5ZMe1P7Gxa4zDFp2xR8vTP8lR6WNuLSxN2j0kP+pP5NDt9HVVAtHJ7tGl5BvDAxHVu1zb+VHukl0T8GmTyRKk5VUNJFZwTNLsOlfyRxi+V/DskWht7+4XZmnG92rbCmemlyYvRL5NyXMRAwHPHTzxYhY8ZIbQJ7qRJf2/ctRSA9CffYbWVPTfZGDkcgOeZlJ8VzP4FRaV0e7ydOw/diLjvKVvq+ejnq6zJk25e1ex6d5/fra8wr2jw2WXJIn/6mgRgVuhA+y64eBC5FDK8sUz6fLmeVLLr2/7Cz74CFaaTamqNq+flNbBDgu/jOxzgq+ZfYFaXWF74ZGKJTRHCwsZiRrNb1iLovR2MlNxM3YbnWSxsSKrqyS3AZf2M8mugdSDQoMKNVDsnRBZxP3urlhCQq9PwPmIY542KHNUlT15QZwiS5xuD/8IuUlp0YADDDEmM+Pba3zwHI0+OEpi492ZG7mtTtdeTcupe6zSjUguxEFgsZaopfAHlF4333yBcYI1UQG1mAknD9dAwiMIEvAiUWY+wtQBQiRrK6ns7SJEtb23u+SU0=
   file: arm-lib.tgz
   on:
     repo: pabx06/arm-lib
+    tag: true
   skip_cleanup: 'true'
