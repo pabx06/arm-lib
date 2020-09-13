@@ -9,17 +9,27 @@ addons:
       - xz-utils
       - wget
       - bash
+      - perl-base
 env:
   - MATRIX_EVAL="CC=clang && CXX=clang++"
 before_script:
-  - mkdir downloads
-  - mkdir builds
-  - cd downloads
-  - ../scripts/download.sh
-  - cd ..
-  - cd builds
-  - ../scripts/extract.sh
-  - cd ..
-  - pwd
+  - ./scripts/download.sh
+  - ./scripts/extract.sh
+  - ./scripts/build_zlib.sh
+  - ./scripts/build_libpng.sh
+  - ./script/build_openssl.sh
+  - ./script/deploy.sh
+
 script:
   - echo "done"
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "travis-ci"
+  - git config --local user.email "travis-ci"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
+deploy:
+  provider: releases
+  file: "arm-lib.tgz"
+  skip_cleanup: true
+  draft: true
