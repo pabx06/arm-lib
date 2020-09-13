@@ -10,6 +10,7 @@ addons:
     - wget
     - bash
     - perl-base
+    - flex
 env:
 - MATRIX_EVAL="CC=clang && CXX=clang++"
 before_script:
