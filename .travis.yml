@@ -17,8 +17,8 @@ before_script:
   - ./scripts/extract.sh
   - ./scripts/build_zlib.sh
   - ./scripts/build_libpng.sh
-  - ./script/build_openssl.sh
-  - ./script/deploy.sh
+  - ./scripts/build_openssl.sh
+  - ./scripts/deploy.sh
 
 script:
   - echo "done"

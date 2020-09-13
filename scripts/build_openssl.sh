@@ -4,6 +4,7 @@
 #https://stackoverflow.com/questions/15539062/cross-compiling-of-openssl-for-linux-arm-v5te-linux-gnueabi-toolchain
 #https://gcc.gnu.org/onlinedocs/gcc/Debugging-Options.html
 #https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
+#test
 
 export PATH="${PWD}/builds/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi/bin:$PATH"
 export PREFIX="${PWD}/install/prefix"
