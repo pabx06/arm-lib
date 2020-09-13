@@ -1,30 +1,22 @@
-language: c                                                                                                                                                                                                                                                                    
-compiler: clang                                                                                                                                                                                                                                                                
-dist: bionic                                                                                                                                                                                                                                                                   
-addons:                                                                                                                                                                                                                                                                        
-  apt:                                                                                                                                                                                                                                                                         
-    packages:                                                                                                                                                                                                                                                                    
+language: c
+compiler: clang
+dist: bionic
+addons:
+  apt:
+  apt:
+    packages:
       - bison
       - xz-utils
       - wget
 env:
   - MATRIX_EVAL="CC=clang && CXX=clang++"
-
 before_script:
   -mkdir downloads
   -mkdir builds
   -cd downloads
-  -bash scripts/download.sh
+  -bash ../scripts/download.sh
+  -cd ..
   -cd builds
-  -bash scripts/extract.sh
-  
-
+  -bash ../scripts/extract.sh
 script:
-  - mkdir build && cd build
-  #- cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra;libcxx;libcxxabi;libunwind;lldb;compiler-rt;lld;polly' ../llvm
-  - cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra;libcxx;libcxxabi;lldb;lld;polly' ../llvm
-  - cmake --build . -- -j 1
-  - ninja check-all
-  - ninja list_install_components
-  - ninja install-distribution
-  - ninja package
+  -echo "done"
