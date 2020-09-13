@@ -2,3 +2,4 @@ downloads/
 builds/
 install/
 arm-lib.tgz
+!downloads/gsoap_2.7.13.zip
