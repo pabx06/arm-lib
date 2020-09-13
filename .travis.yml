@@ -8,15 +8,16 @@ addons:
       - bison
       - xz-utils
       - wget
+      - bash
 env:
   - MATRIX_EVAL="CC=clang && CXX=clang++"
 before_script:
-  -mkdir downloads
-  -mkdir builds
-  -cd downloads
-  -bash ../scripts/download.sh
-  -cd ..
-  -cd builds
-  -bash ../scripts/extract.sh
+  - mkdir downloads
+  - mkdir builds
+  - cd downloads
+  - ../scripts/download.sh
+  - cd ..
+  - cd builds
+  - ../scripts/extract.sh
 script:
   -echo "done"
