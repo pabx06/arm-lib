@@ -11,6 +11,12 @@ addons:
     - bash
     - perl-base
     - flex
+    - make
+    - cmake
+    - autogen
+    - libtool
+    - shtool
+    - automake
 env:
 - MATRIX_EVAL="CC=clang && CXX=clang++"
 before_script:
@@ -19,6 +25,8 @@ before_script:
 - "./scripts/build_zlib.sh"
 - "./scripts/build_libpng.sh"
 - "./scripts/build_openssl.sh"
+- "./scripts/build_spidermonkey.sh"
+- "./scripts/build_expat.sh"
 - "./scripts/deploy.sh"
 script:
 - echo "done"
