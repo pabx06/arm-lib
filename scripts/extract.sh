@@ -3,7 +3,7 @@ rm -rf builds
 mkdir builds
 cd builds
 
-tar -xvf ../downloads/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi.tar.xz
+tar -xf ../downloads/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi.tar.xz
 tar -xvf ../downloads/libpng-1.2.29.tar.gz
 tar -xvf ../downloads/zlib-1.2.3.tar.gz
 tar -xvf ../downloads/pacparser-1.3.7.tar.gz
