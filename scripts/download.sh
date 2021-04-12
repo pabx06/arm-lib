@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir downloads
+mkdir -p downloads
 cd downloads
 wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/armeb-linux-gnueabi/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi.tar.xz
 wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/armeb-linux-gnueabi/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi.tar.xz.asc
