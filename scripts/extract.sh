@@ -11,3 +11,4 @@ tar -xvf ../downloads/OpenSSL_1_0_1j.tar.gz
 unzip  ../downloads/gsoap_2.7.13.zip
 tar -xvf ../downloads/js-1.7.0.tar.gz
 tar -xvf ../downloads/R_2_1_0.tar.gz
+tar -xvf ../downloads/jo-1.4.tar.gz

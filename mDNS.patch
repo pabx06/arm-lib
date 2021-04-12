@@ -1,0 +1,11 @@
+--- /var/tmp/arm-lib/builds/mDNSResponder-1096.40.7/mDNSCore/mDNS.c	2019-09-14 00:55:59.000000000 +0200
++++ ../mDNSCore/mDNS.c	2020-09-24 17:10:19.283113080 +0200
+@@ -27,6 +27,8 @@
+ #include "uDNS.h"                       // Defines entry points into unicast-specific routines
+ #include "nsec.h"
+ #include "dnssec.h"
++#include <stdio.h>
++#include <stdlib.h>
+ 
+ #if MDNSRESPONDER_SUPPORTS(APPLE, D2D)
+ #include "D2D.h"

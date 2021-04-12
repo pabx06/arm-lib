@@ -14,3 +14,7 @@ wget https://github.com/openssl/openssl/archive/OpenSSL_1_0_1j.tar.gz
 #wget https://freefr.dl.sourceforge.net/project/gsoap2/gsoap-2.7/gsoap_2.7.13.zip
 wget https://archive.mozilla.org/pub/spidermonkey/releases/1.7.0/js-1.7.0.tar.gz
 wget https://github.com/libexpat/libexpat/archive/R_2_1_0.tar.gz
+#wget https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-1096.40.7.tar.gz
+#wget https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-625.41.2.tar.gz
+wget https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-333.10.gz
+wget https://github.com/jpmens/jo/archive/refs/tags/1.4.tar.gz

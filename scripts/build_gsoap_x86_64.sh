@@ -1,7 +1,7 @@
 #!/bin/bash
 #libgsoap:
 
-export PATH="${PWD}/builds/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi/bin:$PATH"
+#export PATH="${PWD}/builds/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi/bin:$PATH"
 export PREFIX="${PWD}/install/prefix"
 export EXPREFIX="${PWD}/install/exprefix"
 export LIBDIR="${PWD}/install/libdir"
@@ -10,13 +10,13 @@ DEBUG_ALL="-fPIC -ggdb -Og -fno-eliminate-unused-debug-symbols -g3   -fno-elimin
 export CFLAGS=$DEBUG_ALL
 #export CXXFLAGS=$DEBUG_ALL
 #export CHOST="arm"
-export CC="armeb-linux-gnueabi-gcc"
-export AR="armeb-linux-gnueabi-ar"
+#export CC="armeb-linux-gnueabi-gcc"
+#export AR="armeb-linux-gnueabi-ar"
 #export LD="armeb-linux-gnueabi-ld"
-export RANLIB="armeb-linux-gnueabi-gcc-ranlib"
+#export RANLIB="armeb-linux-gnueabi-gcc-ranlib"
 
 export CC="clang"
-export CC="clang++"
+export CXX="clang++"
 
 export AR="llvm-ar"
 #export LD="armeb-linux-gnueabi-ld"
@@ -30,10 +30,10 @@ export RANLIB="llvm-ranlib"
 
 
 echo "new PATH=${PATH}"
-rm -rf ./builds/gsoap-2.7/
+rm -rf ./builds/gsoap_x86/gsoap-2.7/
 cd ./builds
-unzip ../downloads/gsoap_2.7.13.zip
-cd gsoap-2.7
+unzip ../downloads/gsoap_2.7.13.zip -d gsoap_x86
+cd gsoap_x86/gsoap-2.7
 
 #export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${LIBDIR}:${PREFIX}"
 #sed -i 's|AC_FUNC_MALLOC||g' builds/gsoap-2.7/configure.in
@@ -45,5 +45,5 @@ automake
 #./configure --host="armeb-linux-gnueabi"  --prefix="${PREFIX}" --exec_prefix="${PREFIX}" --libdir="${LIBDIR}" --includedir="${INCLUDEDIR}"
 ./configure
 make clean
-make
+make || true
 #make install
