@@ -28,4 +28,3 @@ automake --add-missing
 ./configure --host="armeb-linux-gnueabi"  --prefix="${PREFIX}" --exec_prefix="${PREFIX}" --libdir="${LIBDIR}" --includedir="${INCLUDEDIR}"
 make check
 make install
-x
