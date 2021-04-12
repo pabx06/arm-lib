@@ -8,5 +8,5 @@ Add lines in
 1.  `scripts/download.sh`
 2.  `scripts/extract.sh`
 then
-3. Create a new `scripts/build_<shortname>.sh`
+3. Create a new `scripts/build_<shortname>.sh` & chmod +x 
 4. Add previous to /.travis.yml
