@@ -3,6 +3,7 @@
 
 export PATH="${PWD}/builds/gcc-linaro-7.5.0-2019.12-x86_64_armeb-linux-gnueabi/bin:$PATH"
 export PREFIX="${PWD}/install/prefix"
+export DESTDIR="${PREFIX}"
 export EXPREFIX="${PWD}/install/exprefix"
 export LIBDIR="${PWD}/install/libdir"
 export INCLUDEDIR="${PWD}/install/includedir"
