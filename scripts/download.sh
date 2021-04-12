@@ -17,4 +17,4 @@ wget -nv https://github.com/libexpat/libexpat/archive/R_2_1_0.tar.gz
 #wget -nv https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-1096.40.7.tar.gz
 #wget -nv https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-625.41.2.tar.gz
 wget -nv https://opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-333.10.gz
-wget -nv https://github.com/jpmens/jo/archive/refs/tags/1.4.tar.gz
+wget -nv https://github.com/jpmens/jo/archive/refs/tags/1.4.tar.gz -O jo-1.4.tar.gz
