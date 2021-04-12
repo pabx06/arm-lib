@@ -22,13 +22,13 @@ env:
 before_script:
 - "./scripts/download.sh"
 - "./scripts/extract.sh"
+- "./scripts/build_jo.sh"
 - "./scripts/build_zlib.sh"
 - "./scripts/build_libpng.sh"
 - "./scripts/build_openssl.sh"
 - "./scripts/build_spidermonkey.sh"
 - "./scripts/build_expat.sh"
-- "./scripts/build_mdns.sh"
-- "./scripts/build_jo.sh"
+- "./scripts/build_mdns-333.sh"
 - "./scripts/deploy.sh"
 script:
 - echo "done"
