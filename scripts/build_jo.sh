@@ -26,5 +26,5 @@ cd ./builds/jo-1.4
 autoreconf -i
 automake --add-missing
 ./configure --host="armeb-linux-gnueabi"  --prefix="${PREFIX}" --exec_prefix="${PREFIX}" --libdir="${LIBDIR}" --includedir="${INCLUDEDIR}"
-make check
+make all
 make install
